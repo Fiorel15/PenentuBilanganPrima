@@ -27,13 +27,13 @@ public class MainAppBilPrima {
     }
     
     // Fungsi untuk mendapat hasil bilangan bulat tersebut bukan bilangan prima
-    public static int getBilPrima(int bil) {
+    public static int getBil(int bil) {
         for (int i = 2; i <= Math.sqrt(bil); i++) {
             if (bil % i == 0) {
                 return i;
             }
         }
-        // Jika angka tersebut adalah bilangan prima
+        // Jika bil tersebut adalah bilangan prima
         return bil; 
     }
     
@@ -46,7 +46,7 @@ public class MainAppBilPrima {
         if(bilanganPrima(bil)){
             System.out.println(bil + " adalah bilangan prima.");
         } else {
-            System.out.println(bil + " bukan bilangan prima.");
+            System.out.println(bil + " bukan bilangan prima karena dapat dibagi " + getBil(bil));
         }
     }
 }
